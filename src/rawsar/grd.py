@@ -131,6 +131,7 @@ class Sigma0Product(Sentinel1SarProduct):
         j0, j1 = cols.min(), cols.max() + 1
         return slice(int(lines[i0]), int(lines[i1]) + 1), slice(int(pixels[j0]), int(pixels[j1]) + 1)
 
+    # Adapted from sarsen.sentinel1.Sentinel1SarProduct.beta_nought (Apache-2.0)
     def beta_nought(self, persist: bool = False) -> xr.DataArray:  # noqa: D102
         import xarray_sentinel
 
